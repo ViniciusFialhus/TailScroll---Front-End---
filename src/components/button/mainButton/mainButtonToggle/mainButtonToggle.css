@@ -1,0 +1,25 @@
+.buttonToggle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 90px;
+  height: 100%;
+  padding-left: 10px;
+  color: var(--oppositeColor);
+  font-size: 13px;
+  font-family: var(--fontPrimary);
+  border: 1px solid #3C3E3D;
+  border-radius: 10px;
+  background-color: #151515;
+  cursor: pointer;
+}
+
+.buttonToggle:hover {
+  background-color: #1c2129;
+}
+
+.buttonToggle img {
+  margin-right: 10px;
+  padding-left: 10px;
+  height: 14px;
+}
