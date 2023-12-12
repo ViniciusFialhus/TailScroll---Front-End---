@@ -31,7 +31,7 @@ O objetivo principal do TailScroll é oferecer uma plataforma onde os jogadores 
 ## Links
 
 [![LinkedIn](https://img.shields.io/badge/linkedin-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/viniciusfialhu/)
-[![GitHub](https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white)]()
+[![GitHub](https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white)](https://github.com/ViniciusFialhus/TailScroll---Front-End---/)
 
 
 
