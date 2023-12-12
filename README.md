@@ -1,7 +1,7 @@
 # Projeto TailScroll - Organizador de Fichas de RPG
 
 ## Descrição
-O TailScroll é uma aplicação desenvolvida para agilizar, facilitar e diversificar a criação de fichas de RPG. Com ele, os usuários podem criar fichas personalizadas para personagens de RPG de forma intuitiva e eficiente.
+O TailScroll é uma aplicação desenvolvida para agilizar, facilitar e diversificar a criação de fichas de RPG. Com ele, os usuários podem criar fichas personalizadas para personagens de RPG de forma intuitiva e eficiente. Para a realização na parte do Front - End estou usando React.js junto com o TS para o ajuste de tipos.
 
 ### Objetivo
 O objetivo principal do TailScroll é oferecer uma plataforma onde os jogadores de RPG possam criar fichas personalizadas para seus personagens, permitindo uma variedade de atributos e detalhes para enriquecer a experiência de jogo. Além de facilitar a produção, organização e compartilhamento de fichas entre jogadores e mestre.
