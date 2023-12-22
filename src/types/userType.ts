@@ -1,9 +1,14 @@
 import { Dispatch, SetStateAction } from "react";
 
-export type register = {
+export type registerName = {
   name: string;
+  surname?: string;
+};
+
+export type registerForm = {
   email: string;
   password: string;
+  confirmedPassword: string;
 };
 
 export type login = {
@@ -22,6 +27,5 @@ export type formNewFile = {
   type: string;
   path: string;
 };
-
 
 export type SetContextType = Dispatch<SetStateAction<any>>;

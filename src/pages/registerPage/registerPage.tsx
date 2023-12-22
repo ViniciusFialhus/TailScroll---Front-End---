@@ -1,14 +1,17 @@
-import FormSizeRegister from "../registerPage/components/formSize/formSizeRegister";
-import BannerSizeRegister from "../registerPage/components/bannerSize/bannerSizeRegister";
+import NamePart from "./components/namePart/namePart";
+import EmailPartRegister from "./components/emailPartRegister/emailPartRegister";
+
+import { useState } from "react";
+
 import "../../styles/global.css";
 import "./registerPage.css";
 
 function RegisterPage() {
+  const [change, setChange] = useState(false)
   return (
     <>
       <main className="containerRegister">
-        <BannerSizeRegister />
-        <FormSizeRegister />
+        { change ? <EmailPartRegister/> : <NamePart setChange={setChange}/>}
       </main>
     </>
   );

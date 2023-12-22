@@ -1,5 +1,5 @@
-import FormSizeLogin from "./components/formSize/formSizeLogin";
-import BannerSizeLogin from "./components/bannerSize/bannerSizeLogin";
+import PasswordPart from "./components/passwordPart/passwordPart";
+import EmailPart from "./components/emailPart/emailPart";
 import "../../styles/global.css";
 import "./loginPage.css";
 
@@ -8,8 +8,7 @@ function LoginPage() {
   return (
     <>
       <main className="containerLogin">
-        <FormSizeLogin />
-        <BannerSizeLogin />
+        <EmailPart/>
       </main>
     </>
   );

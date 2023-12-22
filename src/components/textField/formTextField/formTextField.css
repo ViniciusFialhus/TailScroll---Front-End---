@@ -1,0 +1,119 @@
+.containerTextField{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  
+}
+
+
+
+.inputAdjust {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  height: 80%;
+}
+
+
+.inputBase {
+  height: 100%;
+  padding-left: 20px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: 1px solid var(--secundaryColor);
+  background-color: var(--primaryColor);
+  color: var(--placeholderColor);
+  transition: border-color 0.2s ease-in-out;
+}
+
+.inputBaseError{
+  height: 100%;
+  padding-left: 20px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: 2px solid red;
+  background-color: var(--primaryColor);
+  color: var(--placeholderColor);
+  transition: border-color 0.2s ease-in-out;
+}
+
+.labelInput {
+  position: absolute;
+  bottom: 30%;
+  left: 3%;
+  color: var(--placeholderColor);
+  font-size: 16px;
+  font: 400 16px Roboto, RobotoDraft, Helvetica, Arial, sans-serif;
+  pointer-events: none;
+  user-select: none;
+  background-color: var(--primaryColor);
+  transition: all 0.2s ease;
+}
+
+.labelInputError{
+  position: absolute;
+  bottom: 30%;
+  left: 3%;
+  color: red;
+  font-size: 16px;
+  font: 400 16px Roboto, RobotoDraft, Helvetica, Arial, sans-serif;
+  pointer-events: none;
+  user-select: none;
+  background-color: var(--primaryColor);
+  transition: all 0.2s ease;
+}
+
+.inputBase:focus {
+  border: 2px solid #1870e2;
+  outline: none;
+}
+
+.inputBase:focus + .labelInput,
+.inputBase:not(:placeholder-shown) + .labelInput {
+  bottom: 62%;
+  font-size: 12px;
+  padding: 10px;
+  color: #1870e2;
+}
+
+
+.inputBaseError:focus {
+  border: 2px solid red;
+  outline: none;
+}
+
+.inputBaseError:focus + .labelInputError,
+.inputBaseError:not(:placeholder-shown) + .labelInput {
+  bottom: 62%;
+  font-size: 12px;
+  padding: 10px;
+  color: red;
+}
+
+.errorAdjuste{
+  width: 100%;
+  height: 30%;
+  
+}
+
+.container{
+  display: none;
+}
+
+.containerError{
+  display: flex;
+  align-items: center;
+  margin-top: 5px;
+  margin-bottom: 15px;
+}
+
+.containerError .material-symbols-outlined{
+  color: red;
+  margin-right: 10px;
+
+} 
+.errorMessage {
+  color: red;
+  font: 400 13px Roboto, RobotoDraft, Helvetica, Arial, sans-serif;
+}

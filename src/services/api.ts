@@ -1,5 +1,5 @@
 import axios, { AxiosInstance } from "axios";
-import { login, register, formNewFile, formNewFolder} from "../types/userType";
+import { login, register, formNewFile, formNewFolder, registerName, registerForm} from "../types/userType";
 
 const instance: AxiosInstance = axios.create({
   baseURL: "http://localhost:8000",
@@ -9,14 +9,23 @@ const instance: AxiosInstance = axios.create({
   },
 });
 
-export async function registerUser(user: register) {
+export async function registerName(form:registerName) {
   try {
-    const response = await instance.post("/register", user);
-    console.log(response);
-    return true;
-  } catch (error: any) {
+    await instance.post('/registerName', form)
+    return true
+  } catch (error) {
     throw error;
   }
+}
+
+export async function registerForm(form:registerForm) {
+  try {
+    await instance.post('/registerForm', form)
+    return true
+  } catch (error) {
+    throw error;
+  }
+  
 }
 
 export async function loginUser(user: login) {

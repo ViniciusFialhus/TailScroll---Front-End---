@@ -5,8 +5,8 @@
 }
 
 :root {
-  --primaryColor: #1f2022;
-  --secundaryColor: #121212;
+  --primaryColor: #121212;
+  --secundaryColor: #363638;
   --oppositeColor: white;
   --placeholderColor: #c2c5ca;
   --hoverColor: #0d3648;
@@ -14,166 +14,166 @@
   --fontPrimary: "Maven Pro", sans-serif;
 }
 
-.primaryText {
-  text-align: center;
-  padding-top: 50px;
-  color: var(--oppositeColor);
-  font-size: 35px;
-  font-weight: bold;
-  font-family: var(--fontPrimary);
-}
 
-.secundaryText {
-  text-align: center;
-  padding-top: 15px;
-  color: var(--oppositeColor);
-  font-size: 20px;
-  font-weight: lighter;
-  font-family: var(--fontSecundary);
-}
-
-.forgotText {
-  color: var(--oppositeColor);
-  padding-top: 30px;
-  font-size: 20px;
-  font-weight: lighter;
-  font-family: var(--fontSecundary);
-  cursor: pointer;
-}
-
-.showPasswordText {
-  color: var(--oppositeColor);
-  font-family: var(--fontSecundary);
-  margin-left: 20px;
-}
-
-.textSection {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-
-  height: 85%;
-  width: 85%;
-  border-radius: 150px;
-  background-color: var(--secundaryColor);
-}
-
-.textSection h1 {
-  margin-bottom: 30px;
-  color: white;
-  font-size: 50px;
-  font-weight: bold;
-  font-family: var(--fontSecundary);
-  background-color: var(--secundaryColor);
-}
-
-.textSection h2 {
-  color: white;
-  text-align: center;
-  font-size: 30px;
-  font-weight: lighter;
-  font-family: var(--fontSecundary);
-  background-color: var(--secundaryColor);
-}
-
-.mainNewFolder {
+.containerPart {
   display: flex;
   flex-direction: column;
   align-items: center;
-  position: fixed;
+  width: 450px;
+  min-height: 550px;
+  background-color: var(--primaryColor);
   border-radius: 10px;
-  border: 2px solid white;
-  background-color: var(--secundaryColor);
-  width: 200px;
-  animation: animatedNew 1s forwards;
+  border: 1px solid var(--secundaryColor);
 }
 
-@keyframes animatedNew {
-  from {
-    height: 50px;
-  }
-  to {
-    height: 250px;
-  }
+#opacity{
+  opacity: 0.5;
 }
 
-.textSectionNewFolder {
+.containerPart .logoPart {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 50px;
-  width: 100%;
-  color: var(--oppositeColor);
-  font-size: 15px;
-  font-family: var(--fontPrimary);
-  font-weight: 200;
+  margin-top: 5px;
+  height: 100px;
 }
 
-.formPart {
+.containerPart .logoPart img {
+  margin-top: 50px;
+  height: 100px;
+  border-radius: 20px;
+}
+
+.containerPart .textSection {
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
-  height: 170px;
-  width: 90%;
+  margin-top: 40px;
+  height: 100%;
+}
+
+.containerPart .textSection h1 {
+  display: flex;
+  justify-content: center;
+  height: 30px;
+  width: 100%;
+  color: white;
+  color-scheme: light;
+  font-family: Google Sans, Noto Sans Myanmar UI, arial, sans-serif;
+  font-size: 23px;
+  font-weight: 400;
+  line-height: 1.3333;
+}
+
+
+
+.containerPart .textSection h4 {
+  height: 19px;
+  width: 150px;
+  padding-top: 8px;
+  margin-bottom: 30px;
+  font-family: roboto, "Noto Sans Myanmar UI", arial, sans-serif;
+  text-align: center;
+  color: white;
+  font-size: 15px;
+  font-weight: 400;
+  letter-spacing: 0.1px;
+  line-height: 1.5;
+  box-sizing: inherit;
+}
+
+
+.containerPart .formSection {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   margin-top: 10px;
+  width: 90%;
+  height: 70px;
 }
 
-.formPart .containerInput {
-  height: 40px;
-}
-
-.selectedSystem {
-  width: 100%;
-  height: 20%;
-  padding-left: 5px;
-  border: solid 1px var(--oppositeColor);
-  border-radius: 5px;
-  color: var(--placeholderColor);
-  font-size: 12px;
-  font-family: var(--fontSecundary);
-  background-color: var(--primaryColor);
-}
-
-.errSelectedSystem {
-  width: 100%;
-  height: 20%;
-  padding-left: 5px;
-  border: solid 1px red;
-  border-radius: 5px;
-  color: red;
-  font-size: 12px;
-  font-family: var(--fontSecundary);
-  background-color: var(--primaryColor);
-}
-
-.sectionBase {
+.loaderHidden{
   display: none;
 }
 
-.errSection {
+.loader {
+  width: 100%;
+  height: 4.8px;
+  display: inline-block;
+  position: relative;
+  background: rgba(255, 255, 255, 0.15);
+  overflow: hidden;
+}
+
+.loader::after {
+  content: '';
+  width: 192px;
+  height: 4.8px;
+  background: #1A73E8;
+  position: absolute;
+  top: 0;
+  left: 0;
+  box-sizing: border-box;
+  animation: animloader 2s linear infinite;
+}
+
+@keyframes animloader {
+  0% {
+    left: 0;
+    transform: translateX(-100%);
+  }
+  100% {
+    left: 100%;
+    transform: translateX(0%);
+  }
+}
+
+.showPasswordSection{
   display: flex;
   align-items: center;
-  margin-bottom: 5px;
-  width: 100%;
-  height: 30px;
-}
-
-.errSection label {
-  width: 100%;
-  font-size: 13px;
-  font-family: "Maven Pro", sans-serif;
-  color: red;
-}
-
-.errSection img {
-  margin-top: 5px;
-  margin-right: 5px;
-  height: 15px;
-}
-
-.containerButtonNewFolder {
-  height: 40px;
+  margin-top: 10px;
   width: 90%;
+  height: 25px;
+
 }
+
+.showPasswordSection .checkboxNotChecked{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 25px;
+  height: 100%;
+  border: 2px solid var(--secundaryColor);
+  cursor: pointer;
+}
+
+.showPasswordSection .checkboxChecked{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 25px;
+  height: 100%;
+  border: 2px solid #5387db;
+  background-color: #174EA6;
+  cursor: pointer;
+}
+
+.checkboxChecked:hover{
+  border: 2px solid white;
+  background-color: #174EA6;
+}
+
+.showPasswordSection label {
+  margin-left: 15px;
+  font-size: 14px;
+  font-family: "Google Sans", "Noto Sans Myanmar UI", arial, sans-serif;
+  font-weight: lighter;
+  color: white;
+}
+
+#done{
+  color: white;
+}
+
+    
