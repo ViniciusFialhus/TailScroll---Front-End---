@@ -58,6 +58,7 @@
   justify-content: center;
   height: 30px;
   width: 100%;
+  margin-bottom: 20px;
   color: white;
   color-scheme: light;
   font-family: Google Sans, Noto Sans Myanmar UI, arial, sans-serif;
@@ -86,9 +87,8 @@
 
 .containerPart .formSection {
   display: flex;
-  justify-content: center;
   align-items: center;
-  margin-top: 10px;
+  margin-bottom: 15px;
   width: 90%;
   height: 70px;
 }

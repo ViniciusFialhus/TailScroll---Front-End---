@@ -1,5 +1,12 @@
 import axios, { AxiosInstance } from "axios";
-import { login, register, formNewFile, formNewFolder, registerName, registerForm} from "../types/userType";
+import {
+  formNewFile,
+  formNewFolder,
+  registerName,
+  registerForm,
+  checkingEmail,
+  checkingPassword,
+} from "../types/userType";
 
 const instance: AxiosInstance = axios.create({
   baseURL: "http://localhost:8000",
@@ -9,32 +16,42 @@ const instance: AxiosInstance = axios.create({
   },
 });
 
-export async function registerName(form:registerName) {
+export async function registerName(form: registerName) {
   try {
-    await instance.post('/registerName', form)
-    return true
-  } catch (error) {
-    throw error;
-  }
-}
-
-export async function registerForm(form:registerForm) {
-  try {
-    await instance.post('/registerForm', form)
-    return true
-  } catch (error) {
-    throw error;
-  }
-  
-}
-
-export async function loginUser(user: login) {
-  try {
-    const response = await instance.post("/login", user);
-    const { token } = response.data;
-    localStorage.setItem("token", `${token}`);
+    await instance.post("/registerName", form);
     return true;
-  } catch (error: any) {
+  } catch (error) {
+    throw error;
+  }
+}
+
+export async function registerForm(form: registerForm) {
+  try {
+    await instance.post("/registerForm", form);
+    return true;
+  } catch (error) {
+    throw error;
+  }
+}
+
+export async function checkingEmail(form: checkingEmail) {
+  try {
+    const response = await instance.post("/loginEmail", form);
+    return response;
+  } catch (error) {
+    throw error;
+  }
+}
+
+export async function checkingPassword(form: checkingPassword, token:string) {
+  try {
+    await instance.post("/loginPassword", form, {
+      headers: {
+        authorization: `Bearer ${token}`,
+      },
+    });
+    return true;
+  } catch (error) {
     throw error;
   }
 }
@@ -52,8 +69,7 @@ export async function viewAllSystem(token: string) {
   }
 }
 
-
-export async function viewAllUserFolder(token: string ) {
+export async function viewAllUserFolder(token: string) {
   try {
     const response = await instance.get("/viewFolders", {
       headers: {
@@ -66,8 +82,7 @@ export async function viewAllUserFolder(token: string ) {
   }
 }
 
-
-export async function viewAllUserFiles(token: string ) {
+export async function viewAllUserFiles(token: string) {
   try {
     const response = await instance.get("/viewFiles", {
       headers: {
@@ -80,7 +95,7 @@ export async function viewAllUserFiles(token: string ) {
   }
 }
 
-export async function createFolder(form:formNewFolder ,token: string) {
+export async function createFolder(form: formNewFolder, token: string) {
   try {
     const response = await instance.post("/registerFolder", form, {
       headers: {
@@ -93,7 +108,7 @@ export async function createFolder(form:formNewFolder ,token: string) {
   }
 }
 
-export async function createFile(form:formNewFile ,token: string) {
+export async function createFile(form: formNewFile, token: string) {
   try {
     const response = await instance.post("/registerFile", form, {
       headers: {
@@ -105,18 +120,3 @@ export async function createFile(form:formNewFile ,token: string) {
     throw error;
   }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

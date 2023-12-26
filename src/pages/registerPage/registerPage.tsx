@@ -6,12 +6,17 @@ import { useState } from "react";
 import "../../styles/global.css";
 import "./registerPage.css";
 
-function RegisterPage() {
-  const [change, setChange] = useState(false)
+function RegisterPage({
+  setCheckedCreateAccount,
+}: {
+  setCheckedCreateAccount: any;
+}) {
+  const [change, setChange] = useState(false);
+  const [name, setName] = useState("")
   return (
     <>
       <main className="containerRegister">
-        { change ? <EmailPartRegister/> : <NamePart setChange={setChange}/>}
+        {change ? <EmailPartRegister setCheckedCreateAccount={setCheckedCreateAccount} name={name}/> : <NamePart setChange={setChange} setName={setName} />}
       </main>
     </>
   );

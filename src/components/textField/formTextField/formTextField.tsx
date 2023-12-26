@@ -13,10 +13,7 @@ function FormTextField({
   onChange?:any
   error?: boolean;
   errMessage?: string;
-}) {
-
-  console.log(errMessage);
-  
+}) {  
   return (
     <>
       <main className="containerTextField">

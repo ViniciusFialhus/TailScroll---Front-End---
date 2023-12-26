@@ -11,8 +11,11 @@ export type registerForm = {
   confirmedPassword: string;
 };
 
-export type login = {
+export type checkingEmail = {
   email: string;
+};
+
+export type checkingPassword = {
   password: string;
 };
 

@@ -10,8 +10,14 @@ import { useState, useEffect } from "react";
 import "../../../../styles/global.css";
 import "./emailPartRegister.css";
 
-function EmailPartRegister() {
-  const navigate = useNavigate()
+function EmailPartRegister({
+  setCheckedCreateAccount,
+  name
+}: {
+  setCheckedCreateAccount: any;
+  name:any
+}) {
+  const navigate = useNavigate();
   const [errMessage, setErrMessage] = useState("");
   const [errEmail, setErrEmail] = useState(false);
   const [errPassword, setErrPassword] = useState(false);
@@ -22,6 +28,7 @@ function EmailPartRegister() {
   const [checked, setChecked] = useState(false);
   const [type, setType] = useState("password");
   const [form, setform] = useState({
+    name: name,
     email: "",
     password: "",
     confirmedPassword: "",
@@ -61,8 +68,9 @@ function EmailPartRegister() {
       await registerForm(form);
       setBackgroundState(true);
       setLoaderState(true);
+      setCheckedCreateAccount(true)
       setTimeout(() => {
-        navigate('/main')
+        navigate("/");
       }, 2000);
     } catch (error: any) {
       setErrMessage(error.response.data.error);
@@ -156,12 +164,14 @@ function EmailPartRegister() {
               onClick={handleClick}
             >
               {checked && (
-                <span className="material-symbols-outlined" id="done">done</span>
+                <span className="material-symbols-outlined" id="done">
+                  done
+                </span>
               )}
             </div>
             <label>Mostrar senha</label>
           </section>
-          <FormButton content="Avançar" empty={false} onClick={handleSubmit}/>
+          <FormButton content="Avançar" empty={false} onClick={handleSubmit} />
         </section>
       </main>
     </>

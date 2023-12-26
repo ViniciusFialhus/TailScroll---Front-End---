@@ -10,7 +10,7 @@ import { registerName } from "../../../../services/api";
 import "../../../../styles/global.css";
 import "./namePart.css";
 
-function NamePart({setChange}: {setChange:any}) {
+function NamePart({setChange, setName}: {setChange:any, setName:any}) {
   const [errMessage, setErrMessage] = useState("");
   const [errName, setErrName] = useState(false);
   const [loaderState, setLoaderState] = useState(false);
@@ -36,6 +36,7 @@ function NamePart({setChange}: {setChange:any}) {
       await registerName(form);
       setBackgroundState(true);
       setLoaderState(true);
+      setName(form.name + form.surname)
       setTimeout(() => {
         setChange(true)
       }, 1000);

@@ -1,3 +1,112 @@
+.success-container {
+  left: 50%;
+  top: 27%;
+  width: 600px;
+  transform: translate(-50%, -50%);
+  position: fixed;
+  z-index: 10;
+}
+
+.modalbox.success {
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  border-radius: 2px;
+  background: #fff;
+  padding: 25px 25px 15px;
+  text-align: center;
+  height: 204px;
+  border: 1px solid var(--secundaryColor);
+  background-color: var(--primaryColor);
+  animation: increaseWidth 1s ease;
+  
+}
+
+.modalbox.success.animate .icon {
+  -webkit-animation: fall-in 0.75s;
+  -moz-animation: fall-in 0.75s;
+  -o-animation: fall-in 0.75s;
+  animation: fall-in 0.75s;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
+
+.modalbox.success h1 {
+  font-size: 50px;
+  margin-top: 13px;
+  font-family: "Montserrat", sans-serif;
+  color: #fff;
+  animation: increaseTextSize 0.5s ease;
+}
+
+.modalbox.success p {
+  font-size: 20px;
+  font-family: "Open Sans", sans-serif;
+  color: #fff;
+}
+
+.modalbox.success .icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  margin: 0 auto;
+  margin-top: -70px;
+  border: 3px solid var(--secundaryColor);
+  background-color: var(--primaryColor);
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+}
+
+.modalbox.success .icon span {
+  font-size: 100px;
+  color: #fff;
+}
+
+.center {
+  float: none;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.center .change {
+  clear: both;
+  display: block;
+  font-size: 10px;
+  color: #ccc;
+  margin-top: 10px;
+}
+
+@keyframes fall-in {
+  0% {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes increaseWidth {
+  from {
+    width: 200px; 
+  }
+  to{
+    width: 600px; 
+  }
+}
+
+@keyframes increaseTextSize {
+  from {
+    font-size: 20px; 
+  }
+  to {
+    font-size: 50px; 
+  }
+}
+
 .forgotItem {
   margin-right: 250px;
   margin-top: 10px;
@@ -21,7 +130,7 @@
 .utilsSection h5 {
   font-family: roboto, "Noto Sans Myanmar UI", arial, sans-serif;
   white-space: normal;
-  color: rgb(95, 99, 104);
+  color: var(--oppositeColor);
   font-size: 14px;
   font-weight: 400;
   line-height: 1.4286;
@@ -55,6 +164,6 @@
   height: 40px;
 }
 
-#more{
-  top: 435px;
+#more {
+  top: 461px;
 }
