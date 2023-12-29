@@ -1,0 +1,7 @@
+.containerMainSize{
+    margin-left: 300px;
+    height: 87%;
+    width: 73%;
+    border-radius: 20px;
+    background-color: var(--primaryColor);
+}
