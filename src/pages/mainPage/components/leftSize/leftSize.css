@@ -6,22 +6,55 @@
 
 .containerLeftSize .buttonContainer {
   margin-top: 25px;
+  margin-bottom: 15px;
   margin-left: 25px;
   width: 106px;
   height: 55px;
 }
 
-.containerLeftSize .containerUserAdjuste {
-  margin-top: 25px;
-  margin-left: 25px;
-  width: 200px;
-  height: 120px;
+.containerIconsLeftSize{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-bottom: 25px;
 }
 
-.containerIcon {
+.containerLeftSize .containerUserAdjuste {
   display: flex;
   align-items: center;
-  height: 35px;
+  margin-left: 25px;
+  width: 250px;
+  height: 30px;
+  cursor: pointer;
 }
+
+.containerUserAdjuste img{ 
+  height: 70%;
+}
+
+.containerLeftSize .arrow{
+  height: 7px;
+}
+
+.arrow.selected{
+  display: none;
+}
+
+.containerUserAdjuste h4 {
+  margin-top: 3px;
+  margin-left: 10px;
+  font-size: 14px;
+  font-weight: lighter;
+  font-family: var(--fontPrimary);
+  color: var(--oppositeColor);
+}
+
+.containerUserAdjuste.selected{
+  padding-left: 15px;
+  background-color: #0d3648;
+  border-radius: 15px;
+}
+
+
 
 

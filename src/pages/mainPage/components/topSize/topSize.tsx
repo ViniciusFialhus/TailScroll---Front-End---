@@ -1,5 +1,9 @@
 import { useState } from "react";
 import logo from "../../../../assets/logo.jpg";
+import helpIcon from "../../../../assets/helpIcon/help_24px.svg";
+import settingsIcon from "../../../../assets/settingsIcon/settings_24px.svg";
+import appsIcon from "../../../../assets/appsIcon/apps_24px.svg";
+
 import defaultAvatarIcon from "../../../../assets/defaultAvatarIcon.jpg";
 import "../../../../styles/global.css";
 import "./topSize.css";
@@ -42,9 +46,9 @@ function TopSize() {
         </section>
         <section className="iconsConjunts">
           <div className="containerIcons">
-            <span className="material-symbols-outlined">help</span>
-            <span className="material-symbols-outlined">settings</span>
-            <span className="material-symbols-outlined">apps</span>
+            <img src={helpIcon} about="helpIcon" />
+            <img src={settingsIcon} about="settingsIcon" />
+            <img src={appsIcon} about="appsIcon" />
           </div>
           <div className="profile">
             <img src={defaultAvatarIcon} alt="avatar" />

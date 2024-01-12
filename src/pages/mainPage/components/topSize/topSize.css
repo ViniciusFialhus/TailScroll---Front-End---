@@ -119,8 +119,8 @@
 
 }
 
-.containerIcons span {
-  color: white;
+.containerIcons img {
+  
   font-size: 25px;
   cursor: pointer;
 }
