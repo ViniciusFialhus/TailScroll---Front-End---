@@ -1,0 +1,54 @@
+.mainContext {
+  position: fixed;
+  border-radius: 5px;
+  width: 250px;
+  background-color: var(--primaryColor);
+  animation: animated 0.5s forwards;
+  overflow: hidden;
+}
+
+@keyframes animated {
+  from {
+    height: 50px;
+  }
+  to {
+    height: 170px;
+  }
+}
+
+
+.pastOptions{
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  height: 42px;
+  width: 100%;
+  cursor: pointer;
+}
+
+.pastOptions h1{
+  color: var(--oppositeColor);
+  font-size: 15px;
+  font-weight: 350;
+  font-family: var(--fontSecundary);
+}
+
+.pastOptions img{ 
+  margin-right: 10px;
+  margin-left: 15px;
+  height: 20px;
+}
+
+.pastOptions:hover {
+  background-color: #1c2129;
+}
+
+#finalyOptions{
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+
+}
+
+.hrIcon{
+  opacity: 0.4;
+}

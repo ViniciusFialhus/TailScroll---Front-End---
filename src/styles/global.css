@@ -93,6 +93,10 @@
   height: 70px;
 }
 
+#sectionRegister{
+  margin-top: 20px;
+}
+
 .loaderHidden{
   display: none;
 }
@@ -128,6 +132,8 @@
     transform: translateX(0%);
   }
 }
+
+
 
 .showPasswordSection{
   display: flex;
@@ -184,4 +190,120 @@
   'wght' 400,
   'GRAD' 0,
   'opsz' 24
+}
+
+
+.mainNewFolder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: fixed;
+  border-radius: 5px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background-color: var(--primaryColor);
+  height: 250px;
+  overflow: hidden;
+  animation: animatedWidth 1s forwards;
+}
+
+@keyframes animatedWidth {
+  from {
+    width: 50px;
+  }
+  to {
+    width: 250px;
+  }
+}
+
+.textSectionNewFolder {
+  margin-top: 20px;
+  color: var(--oppositeColor);
+  font-size: 25px;
+  font-weight: 350;
+  font-family: var(--fontSecundary);
+  animation: animatedFontSize 1s forwards;
+  
+}
+
+@keyframes animatedFontSize {
+  from {
+    font-size: 5px;
+  }
+  to {
+    font-size: 25px;
+  }
+}
+
+.formPart {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 170px;
+  width: 90%;
+  margin-top: 10px;
+}
+
+.formPart .containerInput {
+  margin-top: 15px;
+  height: 50px;
+  width: 100%;
+}
+
+.selectedSystem {
+  width: 100%;
+  height: 20%;
+  margin-top: 10px;
+  padding-left: 5px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 5px;
+  color: var(--placeholderColor);
+  font-size: 12px;
+  font-family: var(--fontSecundary);
+  background-color: var(--primaryColor);
+}
+
+.errSelectedSystem {
+  width: 100%;
+  height: 20%;
+  padding-left: 5px;
+  border: solid 1px red;
+  border-radius: 5px;
+  color: red;
+  font-size: 12px;
+  font-family: var(--fontSecundary);
+  background-color: var(--primaryColor);
+}
+
+.sectionBase {
+  display: none;
+}
+
+.errSection {
+  display: flex;
+  align-items: center;
+  margin-bottom: 5px;
+  width: 100%;
+  height: 30px;
+}
+
+.errSection label {
+  width: 100%;
+  font-size: 13px;
+  font-family: "Maven Pro", sans-serif;
+  color: red;
+}
+
+.errSection img {
+  margin-top: 5px;
+  margin-right: 5px;
+  height: 15px;
+}
+
+.containerButtonNewFolder {
+  display: flex;
+  justify-content: center;
+  margin-top: 15px;
+  height: 40px;
+  width: 100%;
+
 }

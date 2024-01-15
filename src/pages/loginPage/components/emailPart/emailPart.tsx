@@ -84,8 +84,7 @@ function EmailPart({
   useEffect(() => {
     setTimeout(() => {
       setModalCreateAccount(false);
-    }, 1000);
-
+    }, 2000);
   }, [modalCreateAccount]);
 
   return (
@@ -128,11 +127,10 @@ function EmailPart({
         <section className="utilsSection">
           <h5>
             Não está no seu computador? Use uma janela de navegação privada para
-            fazer login.{" "}
+            fazer login. 
             <a
               target="_blank"
               href="https://support.google.com/accounts/answer/2917834?visit_id=638385062318610917-705932963&p=signin_privatebrowsing&hl=pt&rd=1"
-              id="more"
             >
               Saiba mais
             </a>

@@ -1,5 +1,6 @@
 import logo from "../../../../assets/logo.jpg";
 import defaultAvatarIcon from "../../../../assets/defaultAvatarIcon.jpg";
+import arrowDrop from "../../../../assets/arrow_drop_down_fill1_24px.svg";
 
 import FormButton from "../../../../components/button/formButton/formButton";
 import FormTextField from "../../../../components/textField/formTextField/formTextField";
@@ -49,9 +50,7 @@ function PasswordPart({ email }: { email: string }) {
       await checkingPassword(form, token as string);
       setBackgroundState(true);
       setLoaderState(true);
-      setTimeout(() => {
-        navigate("/main");
-      }, 2000);
+      window.location.reload();
     } catch (error: any) {
       setErrMessage(error.response.data.error);
       if (rerender) {
@@ -93,7 +92,7 @@ function PasswordPart({ email }: { email: string }) {
           <div className="personSection">
             <img src={defaultAvatarIcon} />
             <h5>{email}</h5>
-            <span className="material-symbols-outlined">expand_more</span>
+            <img src={arrowDrop} />
           </div>
         </section>
         <h4 className="text-line">

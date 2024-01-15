@@ -140,11 +140,9 @@
 }
 
 .utilsSection a {
-  position: absolute;
-  right: 638px;
-  bottom: 236px;
   font-family: roboto, "Noto Sans Myanmar UI", arial, sans-serif;
   white-space: normal;
+  margin-left: 4px;
   font-size: 14px;
   line-height: 1.4286;
   box-sizing: inherit;
@@ -162,8 +160,4 @@
   margin-top: 50px;
   width: 90%;
   height: 40px;
-}
-
-#more {
-  top: 461px;
 }

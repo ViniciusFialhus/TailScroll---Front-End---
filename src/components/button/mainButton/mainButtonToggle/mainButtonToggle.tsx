@@ -1,4 +1,4 @@
-import toggleIcon from '../../../../assets/toggleIconBlack.png'
+import arrowDrop from "../../../../assets/arrow_drop_down_fill1_24px.svg";
 import "./mainButtonToggle.css";
 
 
@@ -7,7 +7,7 @@ function MainButtonToggle({ content }: { content: string }) {
     <>
       <button className="buttonToggle">
         {content}
-        <img src={toggleIcon}/>
+        <img src={arrowDrop}/>
       </button>
     </>
   );

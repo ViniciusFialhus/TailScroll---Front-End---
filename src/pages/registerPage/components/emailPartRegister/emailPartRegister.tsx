@@ -8,7 +8,7 @@ import { useNavigate } from "react-router-dom";
 import { useState, useEffect } from "react";
 
 import "../../../../styles/global.css";
-import "./emailPartRegister.css";
+
 
 function EmailPartRegister({
   setCheckedCreateAccount,
@@ -157,7 +157,7 @@ function EmailPartRegister({
             errMessage={errMessage}
           />
         </section>
-        <section className="buttonSection">
+        <section className="buttonSection" id="sectionRegister">
           <section className="showPasswordSection">
             <div
               className={checked ? "checkboxChecked" : "checkboxNotChecked"}
